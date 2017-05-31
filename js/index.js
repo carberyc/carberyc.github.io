@@ -56,6 +56,13 @@
                     }
                 }
             },
+            family_living: {
+                validators: {
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
+                    }
+                }
+            },
             income: {
                 validators: {
                         notEmpty: {
