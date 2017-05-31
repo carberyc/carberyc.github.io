@@ -7,99 +7,63 @@
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            first_name: {
+            ethnicity: {
                 validators: {
-                        stringLength: {
-                        min: 2,
-                    },
                         notEmpty: {
-                        message: 'Please supply your first name'
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-             last_name: {
+            gender: {
                 validators: {
-                     stringLength: {
-                        min: 2,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your last name'
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-            email: {
+            marital_status: {
                 validators: {
-                    notEmpty: {
-                        message: 'Please supply your email address'
-                    },
-                    emailAddress: {
-                        message: 'Please supply a valid email address'
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-            phone: {
+            first_time_parent: {
                 validators: {
-                    notEmpty: {
-                        message: 'Please supply your phone number'
-                    },
-                    phone: {
-                        country: 'US',
-                        message: 'Please supply a vaild phone number with area code'
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-            address: {
+            employment: {
                 validators: {
-                     stringLength: {
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your street address'
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-            city: {
+            SNAP: {
                 validators: {
-                     stringLength: {
-                        min: 4,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your city'
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-            ethinicity: {
+            TANF: {
                 validators: {
-                    notEmpty: {
-                        message: 'Please select your state'
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             },
-            zip: {
+            income: {
                 validators: {
-                    notEmpty: {
-                        message: 'Please supply your zip code'
-                    },
-                    zipCode: {
-                        country: 'US',
-                        message: 'Please supply a vaild zip code'
-                    }
-                }
-            },
-            comment: {
-                validators: {
-                      stringLength: {
-                        min: 10,
-                        max: 200,
-                        message:'Please enter at least 10 characters and no more than 200'
-                    },
-                    notEmpty: {
-                        message: 'Please supply a description of your project'
-                    }
+                        notEmpty: {
+                        message: 'Please supply your ethnicity'
                     }
                 }
             }
-        })
+        }})
         .on('success.form.bv', function(e) {
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
                 $('#contact_form').data('bootstrapValidator').resetForm();
