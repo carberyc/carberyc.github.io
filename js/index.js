@@ -1,4 +1,4 @@
-$('#contact_form').bootstrapValidator().on('submit', function (e) {
+$(document).$('#contact_form').bootstrapValidator().on('submit', function (e) {
 	$('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
                 $('#contact_form').data('bootstrapValidator').resetForm();
 
