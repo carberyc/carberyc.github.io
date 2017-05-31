@@ -7,90 +7,115 @@
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            ethnicity: {
+            first_name: {
                 validators: {
+                        stringLength: {
+                        min: 2,
+                    },
                         notEmpty: {
-                        message: 'Please supply your ethnicity'
+                        message: 'Please supply your first name'
                     }
                 }
             },
-            gender: {
+             last_name: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                     stringLength: {
+                        min: 2,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your last name'
                     }
                 }
             },
-            marital_status: {
+            email: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                    notEmpty: {
+                        message: 'Please supply your email address'
+                    },
+                    emailAddress: {
+                        message: 'Please supply a valid email address'
                     }
                 }
             },
-            first_time_parent: {
+            phone: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                    notEmpty: {
+                        message: 'Please supply your phone number'
+                    },
+                    phone: {
+                        country: 'US',
+                        message: 'Please supply a vaild phone number with area code'
                     }
                 }
             },
-            employment: {
+            address: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                     stringLength: {
+                        min: 8,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your street address'
                     }
                 }
             },
-            SNAP: {
+            city: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                     stringLength: {
+                        min: 4,
+                    },
+                    notEmpty: {
+                        message: 'Please supply your city'
                     }
                 }
             },
-            TANF: {
+            state: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                    notEmpty: {
+                        message: 'Please select your state'
                     }
                 }
             },
-            family_living: {
+            zip: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                    notEmpty: {
+                        message: 'Please supply your zip code'
+                    },
+                    zipCode: {
+                        country: 'US',
+                        message: 'Please supply a vaild zip code'
                     }
                 }
             },
-            income: {
+            comment: {
                 validators: {
-                        notEmpty: {
-                        message: 'Please supply your ethnicity'
+                      stringLength: {
+                        min: 10,
+                        max: 200,
+                        message:'Please enter at least 10 characters and no more than 200'
+                    },
+                    notEmpty: {
+                        message: 'Please supply a description of your project'
+                    }
                     }
                 }
             }
-        }})
+        })
         .on('success.form.bv', function(e) {
-        //	window.location.replace("http://stackoverflow.com");
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
                 $('#contact_form').data('bootstrapValidator').resetForm();
 
-             //Prevent form submission
-             e.preventDefault();
+            // Prevent form submission
+            e.preventDefault();
 
-             //Get the form instance
+            // Get the form instance
             var $form = $(e.target);
 
-             //Get the BootstrapValidator instance
+            // Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
-            
-            console.log($form.serialize);
-            
 
-             //Use Ajax to submit form data
-           // $.post($form.attr('action'), $form.serialize(), function(result) {
-           //     console.log(result);
-          //  }, 'json');
-     //   });
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
 });
