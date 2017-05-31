@@ -88,7 +88,7 @@
             }, 'json');
         }); */
 });
-$('#form').validator().on('submit', function (e) {
+$('#contact_form').bootstrapValidator().on('submit', function (e) {
 	$('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
                 $('#contact_form').data('bootstrapValidator').resetForm();
 
