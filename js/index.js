@@ -74,7 +74,7 @@
         .on('success.form.bv', function(e) {
         //	window.location.replace("http://stackoverflow.com");
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#contact_form').data('bootstrapValidator').resetForm();
+                //$('#contact_form').data('bootstrapValidator').resetForm();
 
              //Prevent form submission
              e.preventDefault();
