@@ -84,10 +84,13 @@
 
              //Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
+            
+            console.log($form.serialize);
+            
 
              //Use Ajax to submit form data
-            $.post($form.attr('action'), $form.serialize(), function(result) {
-                console.log(result);
-            }, 'json');
-        });
+           // $.post($form.attr('action'), $form.serialize(), function(result) {
+           //     console.log(result);
+          //  }, 'json');
+     //   });
 });
