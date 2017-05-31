@@ -71,8 +71,8 @@
                 }
             }
         }})
-        .on('success.form.bv', function(e) {
-        	window.location.replace("http://stackoverflow.com");
+        //.on('success.form.bv', function(e) {
+        //	window.location.replace("http://stackoverflow.com");
            // $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
                // $('#contact_form').data('bootstrapValidator').resetForm();
 
@@ -89,5 +89,5 @@
             //$.post($form.attr('action'), $form.serialize(), function(result) {
             //    console.log(result);
             //}, 'json');
-        });
+      //  });
 });
