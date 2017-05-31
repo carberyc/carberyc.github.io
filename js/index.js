@@ -72,30 +72,22 @@
             }
         }
     })
-        //.on('success.form.bv', function(e) {
         .on('success.form.bv', function(e) {
-        //	window.location.replace("http://stackoverflow.com");
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                //$('#contact_form').data('bootstrapValidator').resetForm();
+                $('#contact_form').data('bootstrapValidator').resetForm();
 
-             //Prevent form submission
-             e.preventDefault();
+            // Prevent form submission
+            e.preventDefault();
 
-             //Get the form instance
+            // Get the form instance
             var $form = $(e.target);
 
-             //Get the BootstrapValidator instance
+            // Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
-            
-            console.log('ah');
-            
-            console.log($form.serialize);
-            
 
-             //Use Ajax to submit form data
-           // $.post($form.attr('action'), $form.serialize(), function(result) {
-           //     console.log(result);
-          //  }, 'json');
-     //   });
-     });
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
 });
