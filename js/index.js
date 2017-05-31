@@ -71,7 +71,8 @@
                 }
             }
         }})
-        .on('success.form.bv', function(e) {
+        //.on('success.form.bv', function(e) {
+        $('#form').validator().on('submit', function (e) {
         //	window.location.replace("http://stackoverflow.com");
             $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
                 //$('#contact_form').data('bootstrapValidator').resetForm();
