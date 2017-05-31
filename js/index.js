@@ -85,6 +85,8 @@
              //Get the BootstrapValidator instance
             var bv = $form.data('bootstrapValidator');
             
+            console.log('ah');
+            
             console.log($form.serialize);
             
 
