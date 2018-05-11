@@ -350,7 +350,8 @@ function update () {
     .transition()
       .duration(TRANSITION_DURATION)
       .style("opacity", OPACITY.NODE_DEFAULT)
-      .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
+	  .attr("transform", (d.the_x, d.the_y))
+      //.attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; });
 
   nodeEnter.append("text");
   nodeEnter.append("rect")
