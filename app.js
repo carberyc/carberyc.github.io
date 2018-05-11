@@ -502,11 +502,11 @@ function update () {
 }
 
 var exampleNodes = [
-  {"type":"Asset","id":"a","parent":null,"name":"Assets"},
-  {"type":"Liability","id":"l","parent":null,"number":"l","name":"Liabilities"},
-  {"type":"Equity","id":"eq","parent":null,"number":"eq","name":"Equity"},
-  {"type":"Revenue","id":"r","parent":null,"number":"r","name":"Revenues"},
-  {"type":"Expense","id":"ex","parent":null,"number":"ex","name":"Expenses"},
+  {"type":"Asset","id":"a","parent":null,"name":"Assets", "the_x":15, "the_y":250},
+  {"type":"Liability","id":"l","parent":null,"number":"l","name":"Liabilities", "the_x":150, "the_y":150},
+  {"type":"Equity","id":"eq","parent":null,"number":"eq","name":"Equity", "the_x":325, "the_y":25},
+  {"type":"Revenue","id":"r","parent":null,"number":"r","name":"Revenues", "the_x":150, "the_y":88},
+  {"type":"Expense","id":"ex","parent":null,"number":"ex","name":"Expenses", "the_x":205, "the_y":250},
 ]
 
 var exampleLinks = [
