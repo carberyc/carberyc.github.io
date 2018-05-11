@@ -511,7 +511,7 @@ var exampleNodes = [
 ]
 
 var exampleLinks = [
-  {"source":"a", "target":"eq", "value":Math.floor(Math.random() * 100)},
+  {"source":"a", "target":"eq", "value":10)},
   {"source":"l", "target":"eq", "value":Math.floor(Math.random() * 100)},
   {"source":"ex", "target":"eq", "value":Math.floor(Math.random() * 100)},
   {"source":"ex", "target":"a", "value":Math.floor(Math.random() * 100)},
