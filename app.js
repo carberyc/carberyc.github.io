@@ -512,11 +512,11 @@ var exampleNodes = [
 
 var exampleLinks = [
   {"source":"a", "target":"eq", "value":10)},
-  {"source":"l", "target":"eq", "value":Math.floor(Math.random() * 100)},
-  {"source":"ex", "target":"eq", "value":Math.floor(Math.random() * 100)},
-  {"source":"ex", "target":"a", "value":Math.floor(Math.random() * 100)},
-  {"source":"r", "target":"l", "value":Math.floor(Math.random() * 100)},
-  {"source":"eq", "target":"a", "value":Math.floor(Math.random() * 100)}
+  {"source":"l", "target":"eq", "value":10)},
+  {"source":"ex", "target":"eq", "value":10},
+  {"source":"ex", "target":"a", "value":10},
+  {"source":"r", "target":"l", "value":10},
+  {"source":"eq", "target":"a", "value":10}
 ]
 
 biHiSankey
